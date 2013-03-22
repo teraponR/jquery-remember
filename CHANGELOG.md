@@ -1,4 +1,11 @@
-HEAD
+0.1.0
+-----
+- TO DO
+
+MASTER BRANCH -> ndreckshage/jquery-remember
+-----
+
+1.3.1
 -----
 - Support for AMD.
 
@@ -8,9 +15,6 @@ HEAD
 - `$.cookie('name')` now returns `undefined` in case such cookie does not exist
   (was `null`). Because the return value is still falsy, testing for existence
   of a cookie like `if ( $.cookie('foo') )` keeps working without change.
-
-1.3.1
------
 - Fixed issue where it was no longer possible to check for an arbitrary cookie,
   while json is set to true, there was a SyntaxError thrown from JSON.parse.
 

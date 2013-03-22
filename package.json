@@ -1,7 +1,7 @@
 {
-  "name": "jquery.cookie",
-  "version": "1.3.1",
-  "description": "A simple, lightweight jQuery plugin for reading, writing and deleting cookies.",
+  "name": "jquery.remember",
+  "version": "0.1.0",
+  "description": "Remember stuff. A simple way to set/read/destroy cookies/localstorage.",
   "main": "Gruntfile.js",
   "directories": {
     "test": "test"
@@ -11,11 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/carhartl/jquery-cookie.git"
+    "url": "git://github.com/ndreckshage/jquery-remember.git"
   },
-  "author": "Klaus Hartl",
+  "author": "Nick Dreckshage",
   "license": "MIT",
-  "gitHead": "bd3c9713222bace68d25fe2128c0f8633cad1269",
   "readmeFilename": "README.md",
   "devDependencies": {
     "grunt": "~0.4.0",

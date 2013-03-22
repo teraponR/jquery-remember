@@ -1,0 +1,28 @@
+{
+  "name": "remember",
+  "version": "0.1.0",
+  "title":  "jQuery Remember",
+  "description": "Remember stuff. A simple way to set/read/destroy cookies/localstorage.",
+  "author": {
+    "name": "Nick Dreckshage",
+    "url": "https://github.com/ndreckshage"
+  },
+  "maintainers": [
+    {
+      "name": "Nick Dreckshage",
+      "url": "https://github.com/ndreckshage"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/ndreckshage/jquery-remember/master/MIT-LICENSE.txt"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.9"
+  },
+  "bugs": "https://github.com/ndreckshage/jquery-remember/issues",
+  "homepage": "https://github.com/ndreckshage/jquery-remember",
+  "docs": "https://github.com/ndreckshage/jquery-remember#readme"
+}

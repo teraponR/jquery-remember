@@ -1,3 +1,4 @@
+Copyright 2013 Nick Dreckshage
 Copyright 2013 Klaus Hartl
 
 Permission is hereby granted, free of charge, to any person obtaining

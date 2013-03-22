@@ -12,7 +12,7 @@ module.exports = function (grunt) {
 		jshint: {
 			files: [
 				'Gruntfile.js',
-				'jquery.cookie.js'
+				'jquery.remember.js'
 			],
 			options: {
 				jshintrc: '.jshintrc'
@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 				banner: '/*! <%= pkg.name %> v<%= pkg.version %> | <%= pkg.license %> */\n'
 			},
 			build: {
-				src: 'jquery.cookie.js',
+				src: 'jquery.remember.js',
 				dest: 'build/jquery.cookie-<%= pkg.version %>.min.js'
 			}
 		}
