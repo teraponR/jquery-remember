@@ -13,6 +13,26 @@ Remember stuff. A simple way to set/read/destroy cookies and localstorage.
 + complete code restructure
 + tried to preserve all of the features of $.cookie
 
+## Full Options
+
+```javascript
+settings = $.extend({
+    name: null,         // name/key of the cookie/localstorage item
+    value: undefined,   // value pair of cookie/localstorage
+    getSet: false,      // if true, will get if available, set if not. default is to just get OR set
+    remove: false,      // if true, will remove based on name/key
+    use: 'default',     // whether to use localstorage or cookies. default localstorage with cookie fallback.
+    expires: null,      // forces cookie (invalid localstorage attribue).
+    path: null,         // forces cookie.
+    domain: null,       // forces cookie.
+    secure: null,       // forces cookie.
+    json: false,        // will convert to json when set. parse with get.
+    fallback: true,     // whether to fallback to cookies if localstorage not available.
+    raw: false,         // if true, will skip uri encoding/decoding
+    modernizr: false    // set true if youd rather handle localstorage detection through modernizr
+}, options);
+```
+
 ## Installation
 
 Include script *after* the jQuery library (unless you are packaging scripts somehow else -- minify at your convenience):
