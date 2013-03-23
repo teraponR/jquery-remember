@@ -1,19 +1,17 @@
-/*!*******************************************************
-* ****************************************************** *
-* *                                                    * *
-* *  jQuery Remember Plugin                            * *
-* *  Version 0.1.1                                     * *
-* *                                                    * *
-* *  Copyright Nick Dreckshage, licensed GPL & MIT     * *
-* *  https://github.com/ndreckshage/jquery-remember    * *
-* *                                                    * *
-* *  A fork of jQuery Cookie Plugin										 * *
-* *  https://github.com/carhartl/jquery-cookie				 * *
-* *  Copyright Klaus Hartl														 * *
-* *  Released under the MIT licensed									 * *
-* *																										 * *
-* ****************************************************** *
-*********************************************************/
+/*!
+*
+* jQuery Remember Plugin
+* Version 0.1.1
+*
+* Copyright Nick Dreckshage, licensed GPL & MIT
+* https://github.com/ndreckshage/jquery-remember
+*
+* A fork of jQuery Cookie Plugin
+* https://github.com/carhartl/jquery-cookie
+* Copyright Klaus Hartl
+* Released under the MIT licensed
+*
+*/
 
 (function($){
 
