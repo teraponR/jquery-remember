@@ -34,8 +34,7 @@
       secure: null,       // forces cookie.
       json: false,        // will convert to json when set. parse with get.
       fallback: true,     // whether to fallback to cookies if localstorage not available.
-      raw: false,         // if true, will skip uri encoding/decoding
-      modernizr: true     // false if user wants to risk it and set localstorage without checking browser capability
+      raw: false          // if true, will skip uri encoding/decoding
     }, options);
 
     remember = {
@@ -96,6 +95,8 @@
               // break when we hit a match, or cookie is empty
               if (settings.name === name) {
                 break;
+              } else if (settings.fallback !== false) {
+                value = localStorage.getItem(settings.name) || null;
               } else {
                 value = null;
               }
@@ -133,19 +134,26 @@
         }
       },
       erase: function(){
+        var use = this._use();
+
         // clear localstorage and cookies by setting expiration to negative
-        localStorage.clear(settings.name);
-        this._setCookie('', -1);
+        if (use !== 'cookie' || settings.fallback !== false){
+          localStorage.removeItem(settings.name);
+        }
+        if (use !== 'localstorage' || settings.fallback !== false){
+          this._setCookie('', -1);
+        }
       },
       _use: function(){
-        var use;
+        var use,
+            localStorageSupport = this._localStorage();
 
         // if cookie requested, or any options set that only apply to cookies
         if (settings.use === 'cookie' || settings.expires !== null || settings.path !== null || settings.domain !== null || settings.secure !== null){
           use = 'cookie';
         } else {
-          // use local storage if available with modernizr. or forced if modernizr check turned off (probably bad...)
-          if ((settings.modernizr === true && Modernizr.localstorage) || (typeof Modernizr === 'undefined' && settings.modernizr === false && settings.use === 'localstorage')){
+          // use local storage if available
+          if (localStorageSupport){
             use = 'localstorage';
           } else if (settings.fallback !== false) {
             // default to cookie, unless fallback banned
@@ -180,6 +188,16 @@
           settings.domain ? '; domain=' + settings.domain : '',
           settings.secure ? '; secure' : ''
         ].join('');
+      },
+      _localStorage: function(){
+        // check if a browser supports localstorage with simple try catch
+        try {
+          localStorage.setItem('a','a');
+          localStorage.removeItem('a');
+          return true;
+        } catch(e){
+          return false;
+        }
       },
       _trim: function(s){
         // trail a strings leading/ending whitespace
