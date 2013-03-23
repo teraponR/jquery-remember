@@ -17,6 +17,7 @@
 
 (function($){
 
+  // recommend changing to return function(options) { if using require.js...
   $.remember = function(options){
     var settings,
         remember,
