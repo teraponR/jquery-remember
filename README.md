@@ -54,6 +54,27 @@ Remove cookie/localstorage:
 
 ## Configuration
 
+### TO USE WITH REQUIRE.JS
+
+$.cookie required some editing for me. I did not want to use jquery namespace, like $.cookie(), I wanted cookie(). I recommend this setup...
+
+```javascript
+define(['jquery'], function($){
+  $.remember = function(options){ // (or return function(options{ ... if you want to avoid jquery namespace entirely)
+  // ALL CODE, DONT TOUCH (well, unless you want to)
+  return $.remember; // remove if you went the return function route...
+});
+
+// then in whatever module
+
+require(['jquery', 'jquery.remember'], function($, remember){ // jquery not required here...but figured you probably will have it
+});
+
+// now, both these would work
+$.remember({ name: 'test' });
+remember({ name: 'test' });
+```
+
 ### raw
 
 By default the cookie/localstorage value is encoded/decoded when writing/reading, using `encodeURIComponent`/`decodeURIComponent`. Bypass this by raw to true:
