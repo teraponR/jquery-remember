@@ -97,3 +97,6 @@ Run over a server, example:
 Currently very basic test setup showing functionality, would be great to build this in actual testing framework (similar to $.cookie)
 
 *If you prefer simple cookie management only, please check out the original repo at [jquery.cookie](https://github.com/carhartl/jquery-cookie)*
+
+** Thanks
+[carhartl](https://github.com/carhartl) -- original author of $.cookie
