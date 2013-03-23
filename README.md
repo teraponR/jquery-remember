@@ -16,9 +16,8 @@ Remember stuff. A simple way to set/read/destroy cookies and localstorage.
 ## Installation
 
 Include script *after* the jQuery library (unless you are packaging scripts somehow else -- minify at your convenience):
-```javascript
-<script src="/path/to/jquery.remember.js"></script>
-```
+    
+    <script src="/path/to/jquery.remember.js"></script>
 
 ## Usage
 
