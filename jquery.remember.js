@@ -2,10 +2,10 @@
 * ****************************************************** *
 * *                                                    * *
 * *  jQuery Remember Plugin                            * *
-* *  Version 0.1.0                                     * *
+* *  Version 0.1.1                                     * *
 * *                                                    * *
 * *  Copyright Nick Dreckshage, licensed GPL & MIT     * *
-* *  https://github.com/ndreckshage/roughdraft.js      * *
+* *  https://github.com/ndreckshage/jquery-remember    * *
 * *                                                    * *
 * *  A fork of jQuery Cookie Plugin										 * *
 * *  https://github.com/carhartl/jquery-cookie				 * *
