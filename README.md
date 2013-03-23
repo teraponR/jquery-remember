@@ -74,6 +74,11 @@ require(['jquery', 'jquery.remember'], function($, remember){ // jquery not requ
 $.remember({ name: 'test' });
 remember({ name: 'test' });
 ```
+### modernizr
+
+using modernizr is optional. a simple test is build in to detect browser support, but if you would rather use modernizr local storage, just make sure modernizr is loaded, and then call with
+
+    $.remember({ name: 'test', value: 'value', modernizr: true });
 
 ### raw
 

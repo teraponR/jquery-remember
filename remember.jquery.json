@@ -10,7 +10,7 @@
         "key",
         "value"
     ],
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": {
         "name": "Nick Dreckshage",
         "url": "http://www.nickdreckshage.com"
@@ -33,6 +33,6 @@
     "docs": "https://github.com/ndreckshage/jquery-remember#readme",
     "download": "https://github.com/ndreckshage/jquery-remember/archive/master.zip",
     "dependencies": {
-        "jquery": ">=1.9"
+        "jquery": ">=1.6.3"
     }
 }

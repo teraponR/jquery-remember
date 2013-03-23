@@ -34,7 +34,8 @@
       secure: null,       // forces cookie.
       json: false,        // will convert to json when set. parse with get.
       fallback: true,     // whether to fallback to cookies if localstorage not available.
-      raw: false          // if true, will skip uri encoding/decoding
+      raw: false,         // if true, will skip uri encoding/decoding
+      modernizr: false    // set true if youd rather handle localstorage detection through modernizr
     }, options);
 
     remember = {
@@ -190,13 +191,17 @@
         ].join('');
       },
       _localStorage: function(){
-        // check if a browser supports localstorage with simple try catch
-        try {
-          localStorage.setItem('a','a');
-          localStorage.removeItem('a');
-          return true;
-        } catch(e){
-          return false;
+        if (settings.modernizr === true && typeof Modernizr !== 'undefined'){
+          return Modernizr.localstorage;
+        } else {
+          // check if a browser supports localstorage with simple try catch
+          try {
+            localStorage.setItem('jquery-remember-test','jquery-remember-test');
+            localStorage.removeItem('jquery-remember-test');
+            return true;
+          } catch(e){
+            return false;
+          }
         }
       },
       _trim: function(s){
