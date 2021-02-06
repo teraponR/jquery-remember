@@ -1,0 +1,22 @@
+{
+  "name": "jquery-remember",
+  "version": "1.0.0",
+  "description": "*a fork of [jquery.cookie](https://github.com/carhartl/jquery-cookie)*",
+  "main": "jquery.remember.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teraponR/jquery-remember.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teraponR/jquery-remember/issues"
+  },
+  "homepage": "https://github.com/teraponR/jquery-remember#readme"
+}
